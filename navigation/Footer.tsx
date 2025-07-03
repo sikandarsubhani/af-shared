@@ -1,10 +1,10 @@
-// import { PAGE } from '@/utils/constants';
-import { APIDocsUrls, toolsUrls } from '@/utils/navigation-link';
-// import { pageUrl } from '@/utils/utils';
+import { PAGE } from '@/utils/constants';
+import { APIDocsUrls, toolsUrls } from '@/utils/navigation-links';
+import { pageUrl } from '@/utils/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import NoPrefetchLink from './common/NoPrefetchLink';
-import { FacebookIcon, HeartIcon, TwitterIcon, LinkedinIcon } from './icons';
+import NoPrefetchLink from '../../components/common/NoPrefetchLink';
+import { FacebookIcon, HeartIcon, LinkedinIcon, TwitterIcon } from '../../components/icons';
 
 function Footer() {
   return (
@@ -16,7 +16,7 @@ function Footer() {
               Ready to get started?
             </p>
             <Link
-              href='#'
+              href={pageUrl(PAGE.Signup)}
               className='bg-primary text-center py-5 px-10 rounded-full text-black font-medium text-base'
             >
               Sign Up for Free
@@ -86,10 +86,10 @@ function Footer() {
                   <h3 className='text-primary text-xl font-bold'>Docs</h3>
                   <ul className='space-y-1'>
                     <li>
-                      <Link href='#'>Documentation</Link>
+                      <Link href={pageUrl(PAGE.APIFreaks)}>Documentation</Link>
                     </li>
                     <li>
-                      <Link href='#'>Swagger Docs</Link>
+                      <Link href={pageUrl(PAGE.Swagger)}>Swagger Docs</Link>
                     </li>
                   </ul>
                 </div>
@@ -99,15 +99,15 @@ function Footer() {
                   </h3>
                   <ul className='space-y-1'>
                     <li>
-                      <Link href='#'>
+                      <Link href={pageUrl(PAGE.APIPlansPricingOneOff)}>
                         Pricing
                       </Link>
                     </li>
                     <li>
-                      <Link href='#'>Sign up</Link>
+                      <Link href={pageUrl(PAGE.Signup)}>Sign up</Link>
                     </li>
                     <li>
-                      <Link href='#'>Sign In</Link>
+                      <Link href={pageUrl(PAGE.Login)}>Sign In</Link>
                     </li>
                   </ul>
                 </div>
@@ -116,16 +116,16 @@ function Footer() {
                   <h3 className='text-primary text-xl font-bold'>Company</h3>
                   <ul className='space-y-1'>
                     <li>
-                      <Link href='#'>About Us</Link>
+                      <Link href={pageUrl(PAGE.About)}>About Us</Link>
                     </li>
                     <li>
-                      <Link href='#'>Resources</Link>
+                      <Link href={pageUrl(PAGE.Resources)}>Resources</Link>
                     </li>
                     <li>
-                      <Link href='#'>Terms</Link>
+                      <Link href={pageUrl(PAGE.Terms)}>Terms</Link>
                     </li>
                     <li>
-                      <Link href='#'>Privacy</Link>
+                      <Link href={pageUrl(PAGE.PrivacyPolicy)}>Privacy</Link>
                     </li>
                   </ul>
                 </div>
