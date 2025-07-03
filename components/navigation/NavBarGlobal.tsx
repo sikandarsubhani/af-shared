@@ -1,14 +1,14 @@
-import { PAGE } from '@/utils/constants';
+import { PAGE } from '../../utils/constants';
 import {
   APIDocsUrls,
   navigationLinksPublic,
   toolsUrls,
-} from '@/af-shared/utils/navigation-links';
-import { pageUrl } from '@/utils/utils';
+} from '../../utils/navigation-links';
+import { pageUrl } from '../../utils/utils';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
-import DropdownMenu from '../../components/common/DropDownMenu';
+import DropdownMenu from '../common/DropDownMenu';
 const MobileNavigationGlobal = dynamic(
   () => import('../../components/navigation/MobileNavigationGlobal')
 );

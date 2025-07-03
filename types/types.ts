@@ -8,8 +8,7 @@ import {
   PRICING_ENDPOINT_ID,
   SUBSCRIPTION_STATUS,
   USER_ROLE,
-} from '@/utils/constants';
-import { ReactNode } from 'react';
+} from '../utils/constants';
 
 export type FormFeedback = {
   type: 'error' | 'success';
@@ -386,7 +385,7 @@ export type APIDocumentationItem = {
   name: string;
   href: string;
   description?: string;
-  logo?: (props: { width?: string; height?: string }) => React.ReactElement;
+  logo?: (props: { width?: string; height?: string }) => any;
   isShowInDocs: boolean;
 };
 
@@ -410,7 +409,7 @@ export type OrgPlan = {
   price: number | null;
   features: Array<string>;
   duration: PLAN_DURATION;
-  button: () => ReactNode;
+  button: () => any;
 };
 
 export type JwtPayload = {

@@ -29,49 +29,34 @@ import {
   UserAgentApiIcon,
   WhoIsHistoricalLookupIcon,
   WhoIsLookupIcon,
-} from '@/components/icons';
-import { ProductCategory, ProductsCategoriesTestPages } from '@/types/types';
-import { PAGE } from '../../utils/constants';
-import { pageUrl } from '../../utils/utils';
+} from '../components/Icons';
+import { ProductCategory, ProductsCategoriesTestPages } from '../types/types';
 
-export const apiList: ProductCategory[] = [
-  {
-    heading: 'General',
-    subheadings: [
-      { name: 'APIFreaks', href: pageUrl(PAGE.APIFreaks), isShowInDocs: true },
-      {
-        name: 'Organization and Teams',
-        href: pageUrl(PAGE.OrganizationAndTeams),
-        isShowInDocs: true,
-      },
-      {
-        name: 'Credits Usage API',
-        href: pageUrl(PAGE.CreditsUsageApi),
-        isShowInDocs: true,
-      },
-    ],
-  },
-  {
-    heading: 'Geolocation APIs',
-    subheadings: [
-      {
-        name: 'IP Geolocation Lookup API',
-        href: pageUrl(PAGE.IPLocator),
-        description:
-          'Retrieve real-time and accurate geolocation and security information for an IPv4 or IPv6 address.',
-        logo: IpLocationLookupIcon,
-        isShowInDocs: true,
-      },
-      {
-        name: 'Bulk IP Geolocation Lookup',
-        href: pageUrl(PAGE.BulkIPLookup),
-        logo: BulkIpLocationLookupIcon,
-        description:
-          'Retrieve geolocation information for multiple IP addresses in a single request.',
-        isShowInDocs: true,
-      },
-    ],
-  },
+// Placeholder exports that will be populated by repositories
+export let APIDocsUrls: Array<{ title: string; link: string }> = [];
+export let toolsUrls: Array<{ title: string; link: string }> = [];
+export let navigationLinksPublic: Array<{ href: string; label: string }> = [];
+export let navigationLinksPrivate: Array<{ href: string; label: string }> = [];
+
+// Function to set navigation data from repositories
+export function setNavigationData(data: {
+  APIDocsUrls: Array<{ title: string; link: string }>;
+  toolsUrls: Array<{ title: string; link: string }>;
+  navigationLinksPublic: Array<{ href: string; label: string }>;
+  navigationLinksPrivate: Array<{ href: string; label: string }>;
+}): void {
+  APIDocsUrls.length = 0;
+  APIDocsUrls.push(...data.APIDocsUrls);
+  
+  toolsUrls.length = 0;
+  toolsUrls.push(...data.toolsUrls);
+  
+  navigationLinksPublic.length = 0;
+  navigationLinksPublic.push(...data.navigationLinksPublic);
+  
+  navigationLinksPrivate.length = 0;
+  navigationLinksPrivate.push(...data.navigationLinksPrivate);
+}
   {
     heading: 'WHOIS APIs',
     subheadings: [
