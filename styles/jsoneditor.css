@@ -1,0 +1,70 @@
+.jsoneditor-values {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.jsoneditor-tree {
+  margin-top: 0 !important;
+}
+
+.jsoneditor-modal .pico-modal-header {
+  background: #ffde00;
+  color: #131313;
+}
+.jsoneditor-modal a {
+  color: #ffde00;
+}
+
+.jsoneditor-modal .jsoneditor-jmespath-label {
+  color: #ffde00;
+}
+
+.jsoneditor-modal .selectr-selected .selectr-tag {
+  background-color: #ffde00;
+  border-radius: 5px;
+}
+
+.jsoneditor-modal
+  .jsoneditor-button-group.jsoneditor-button-group-value-asc
+  input.jsoneditor-button-asc,
+.jsoneditor-modal
+  .jsoneditor-button-group.jsoneditor-button-group-value-desc
+  input.jsoneditor-button-desc {
+  background: #ffde00;
+  border-color: #ffde00;
+  color: #131313;
+}
+
+.jsoneditor {
+  color: #1a1a1a;
+  border: none;
+}
+
+div.jsoneditor-value.jsoneditor-null {
+  color: #ffde00;
+}
+
+.jsoneditor-menu {
+  color: #131313;
+  background-color: #ffde00;
+  border-bottom: 1px solid #ffde00;
+}
+
+.selectr-option.active {
+  color: #131313;
+  background-color: #ffde00;
+}
+
+*,
+::before,
+::after {
+  border-style: none;
+}
+
+div.jsoneditor-value.jsoneditor-number {
+  color: #1a1a1a;
+}
+
+div.jsoneditor-value.jsoneditor-string {
+  color: #1a1a1a;
+}
