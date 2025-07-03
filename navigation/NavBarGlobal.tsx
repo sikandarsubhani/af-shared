@@ -3,7 +3,7 @@ import {
   APIDocsUrls,
   navigationLinksPublic,
   toolsUrls,
-} from '@/utils/navigation-links';
+} from '@/af-shared/utils/navigation-links';
 import { pageUrl } from '@/utils/utils';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';

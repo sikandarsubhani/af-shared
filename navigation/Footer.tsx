@@ -1,5 +1,5 @@
 import { PAGE } from '@/utils/constants';
-import { APIDocsUrls, toolsUrls } from '@/utils/navigation-links';
+import { APIDocsUrls, toolsUrls } from '@/af-shared/utils/navigation-links';
 import { pageUrl } from '@/utils/utils';
 import Image from 'next/image';
 import Link from 'next/link';
